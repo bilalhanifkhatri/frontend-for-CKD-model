@@ -1,0 +1,21 @@
+.contact-us {
+  padding: 20px;
+}
+
+.team-member {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.member-info {
+  width: 30%;
+}
+
+.member-info h4 {
+  margin-bottom: 5px;
+}
+
+.member-info p {
+  margin: 5px 0;
+}
