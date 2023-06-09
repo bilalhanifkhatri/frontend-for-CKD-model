@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router,Switch, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Routes,
+  Route,
+} from "react-router-dom";
 import Header from "./components/header/Header";
 import Home from "./components/home/Home";
 import About from "./components/aboutUs/AboutUs";
@@ -8,7 +13,7 @@ import Footer from "./components/footer/Footer";
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/frontend-for-CKD-model">
       <Header />
       <Routes>
         <Route exact path="/" element={<Home />} />
