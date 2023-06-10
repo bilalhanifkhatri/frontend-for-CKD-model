@@ -1,7 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 import "./style.css";
 
 const Home = () => {
+  const [field1, setField1] = useState("");
+  const [field2, setField2] = useState("");
+  // ... define useState for other fields
+
+  const [selectedOption, setSelectedOption] = useState("");
+
+  const [response, setResponse] = useState("");
+
+  const handleButtonClick = async () => {
+    try {
+      const requestData = {
+        field1,
+        field2,
+        // ... include other fields in the request data
+        selectedOption,
+      };
+
+      const res = await axios.post("/api/endpoint", requestData);
+      setResponse(res.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <div className="home">
       <div className="center">
@@ -11,7 +36,12 @@ const Home = () => {
       <div className="inputFields">
         <div className="inputDiv">
           <label htmlFor="bp">BP</label>
-          <input type="text" name="bp" />
+          <input
+            type="text"
+            name="bp"
+            value={field1}
+            onChange={(e) => setField1(e.target.value)}
+          />
         </div>
         <div className="inputDiv">
           <label htmlFor="bp1">Bp1</label>
@@ -44,17 +74,22 @@ const Home = () => {
       </div>
       <div className="inputModelAndPredictButton">
         <div className="inputelectDiv">
-          <select>
+          <select
+            value={selectedOption}
+            onChange={(e) => setSelectedOption(e.target.value)}
+          >
             <option value="option1">Random Forest</option>
             <option value="option2">Standard Vector Machine (SVM)</option>
             <option value="option3">Decision Tree</option>
           </select>
         </div>
-        <button>Predict</button>
+        <button onClick={handleButtonClick}>Predict</button>
       </div>
-      <div className="result">
-        The probability of CKD according to given data is: 50%
-      </div>
+      {response && (
+        <div className="result">
+          <h3>The probability of CKD according to given data is: {response}</h3>
+        </div>
+      )}
       <div className="analysisCard">
         <div className="card1">
           <h4>95.7%</h4>
