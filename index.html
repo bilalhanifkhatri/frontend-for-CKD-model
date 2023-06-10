@@ -2,14 +2,43 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="manifest" href="/pwa/manifest.json" />
+
+    <!-- for pwa mainfist.json  -->
+    <link rel="manifest" href="./pwa/manifest.json" />
     <!-- <link rel="manifest" href="/app.webmanifest" crossorigin="use-credentials" /> if cross origin  -->
+
+    <!-- for favicon  -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./fav/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./fav/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./fav/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./fav/site.webmanifest" />
+
     <title>Chronic Kidney Disease Prediction</title>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+
+    <script>
+      if (typeof navigator.serviceWorker !== 'undefined') {
+        navigator.serviceWorker.register('./pwa/sw.js')
+      }
+    </script>
+    
   </body>
 </html>
