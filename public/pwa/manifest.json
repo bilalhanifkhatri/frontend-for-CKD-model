@@ -2,7 +2,7 @@
   "background_color": "#fdfff4",
   "description": "CKD Prediction Model (Frontend) - University Project: This repo houses the frontend code for a CKD prediction model, developed as a university project. Users can input data and receive CKD predictions through the user-friendly interface.",
   "dir": "ltr",
-  "display": "standalone",
+  "display": "fullscreen",
   "name": "Chronic Kidney Disease Prediction",
   "orientation": "any",
   "scope": "/",

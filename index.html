@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        margin: 0;
+      }
+    </style>
 
     <!-- for pwa mainfist.json  -->
     <link rel="manifest" href="./pwa/manifest.json" />
@@ -35,10 +40,13 @@
     <script type="module" src="/src/main.jsx"></script>
 
     <script>
-      if (typeof navigator.serviceWorker !== 'undefined') {
-        navigator.serviceWorker.register('./pwa/sw.js')
+      if (typeof navigator.serviceWorker !== "undefined") {
+        navigator.serviceWorker.register("./pwa/sw.js");
       }
     </script>
-    
+    <script>
+      window.__BASE_URL__ =
+        "https://bilalhanifkhatri.github.io/frontend-for-CKD-model/";
+    </script>
   </body>
 </html>

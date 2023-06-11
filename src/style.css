@@ -1,0 +1,44 @@
+body {
+    background-color: black;
+    color: white;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+  }
+  
+  .heading {
+    text-align: center;
+  }
+  
+  .center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  
+  #algorithm-select {
+    width: 250px;
+    text-align: center;
+  }
+  
+  input[type="file"] {
+    margin-top: 1rem;
+  }
+  
+  
+  
+  .result {
+    margin-top: 1rem;
+  }
+  
+  .result p {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
