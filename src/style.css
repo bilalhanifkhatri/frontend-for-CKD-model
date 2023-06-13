@@ -1,44 +1,82 @@
 body {
-    background-color: black;
-    color: white;
-  }
-  
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    justify-content: center;
-  }
-  
-  .heading {
-    text-align: center;
-  }
-  
-  .center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 2rem;
-  }
-  
-  #algorithm-select {
-    width: 250px;
-    text-align: center;
-  }
-  
-  input[type="file"] {
-    margin-top: 1rem;
-  }
-  
-  
-  
-  .result {
-    margin-top: 1rem;
-  }
-  
-  .result p {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
+  background-color: black;
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+.heading {
+  text-align: center;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+#algorithm-select {
+  width: 250px;
+  text-align: center;
+}
+
+input[type="file"] {
+  margin-top: 1rem;
+}
+
+.result {
+  margin-top: 1rem;
+}
+
+.result p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.submitButton {
+  margin-top: 1.5rem;
+  margin-bottom: 5rem;
+  width: 250px;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  height: 3rem;
+  border-radius: 10px;
+}
+
+#form-file-upload {
+  margin-bottom: 0%;
+  margin-top: 1rem;
+}
+
+#clear-button {
+  margin-top: 1rem;
+}
+
+.upload-list {
+  margin-top: 1rem;
+  width: 430px;
+}
+
+.file-name {
+  width: 110px;
+  color: black;
+  font-weight: bold;
+}
+
+.progress-container {
+  font-weight: bold;
+  font-size: medium;
+  text-align: center;
+}
+.file-size{
+  font-weight: bold;
+  font-size: medium;
+}

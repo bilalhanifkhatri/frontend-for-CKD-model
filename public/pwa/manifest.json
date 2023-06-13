@@ -7,7 +7,7 @@
   "orientation": "any",
   "scope": "/",
   "short_name": "CKD Predicition",
-  "start_url": "/",
+  "start_url": "/frontend-for-CKD-model/",
   "theme_color": "#fef6c5",
   "categories": ["health", "medical"],
   "shortcuts": [],
