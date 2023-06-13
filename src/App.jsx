@@ -1,10 +1,13 @@
 import React from "react";
 import Hello from "./Hello";
+import VideoBackground from "./VideoBackground";
 
 const App = () => {
   return (
     <>
-      <Hello />
+      <VideoBackground>
+      </VideoBackground>
+        <Hello />
     </>
   );
 };
